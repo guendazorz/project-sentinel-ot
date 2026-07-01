@@ -1,0 +1,29 @@
+flowchart TD
+    Internet[Internet]
+    CorpFW[Corporate Firewall]
+    CorpNet[Corporate IT Network]
+    IDMZ[Industrial DMZ]
+    OTFW[OT Firewall]
+    Switch[Managed Industrial Switch with SPAN Port]
+
+    ENG[ENG-01 Engineering Workstation]
+    HMI[HMI-01 HMI Server]
+    HIST[HIST-01 Historian]
+    PLC1[PLC-01 Siemens PLC]
+    PLC2[PLC-02 PLC]
+
+    Zeek[Zeek Monitoring Sensor]
+    Logs[Zeek Logs]
+    Splunk[Splunk Enterprise]
+    SOC[SOC Dashboards & Alerts]
+
+    Internet --> CorpFW --> CorpNet --> IDMZ --> OTFW --> Switch
+
+    Switch --> ENG
+    Switch --> HMI
+    Switch --> HIST
+    Switch --> PLC1
+    Switch --> PLC2
+
+    Switch -. mirrored traffic .-> Zeek
+    Zeek --> Logs --> Splunk --> SOC

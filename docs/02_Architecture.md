@@ -34,3 +34,10 @@ Engineering WS      HMI Server        PLCs
                 Splunk Enterprise
                         |
               SOC Dashboards & Alerts
+
+## Architecture Diagram Source
+
+The Mermaid diagram source is stored at:
+
+```text
+docs/diagrams/architecture.mmd EOF
