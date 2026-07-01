@@ -1,0 +1,11 @@
+*.log
+*.pcapng
+*.zip
+*.gz
+
+zeek_logs/
+
+splunk/
+
+.DS_Store
+Thumbs.db
