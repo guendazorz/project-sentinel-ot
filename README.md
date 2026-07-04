@@ -18,6 +18,32 @@ The project analyzes industrial network traffic captured in PCAP files, generate
 
 ---
 
+# Project Workflow
+
+```text
+Industrial PCAP
+        │
+        ▼
+      Zeek
+        │
+        ▼
+ Structured Network Logs
+        │
+        ▼
+ Splunk Enterprise
+        │
+        ▼
+ Baseline Analysis
+        │
+        ▼
+ Detection Engineering
+        │
+        ▼
+ OT Security Dashboard
+```
+
+---
+
 # Architecture
 
 ```
@@ -90,18 +116,51 @@ Project-Sentinel/
 
 # Dashboard
 
-The dashboard provides a high-level overview of the monitored environment, including:
+The Splunk dashboard provides a centralized view of the monitored OT environment, allowing analysts to quickly assess network activity and protocol usage.
 
-- Total monitored events
-- Industrial protocol activity
-- Log distribution
-- Observed files
-- Asset visibility
-- Security summary
+Key metrics include:
 
-> *(Insert dashboard screenshot here)*
+- 📈 Total Network Events
+- 📂 Observed Files
+- ⚙️ Modbus Events
+- 📊 Event Distribution by Log Type
+- 📁 Top Log Sources
+- 🏭 Industrial Protocol Activity
+- 🛡️ Environment Summary
+
+![Project Sentinel Dashboard](screenshots/dashboard.png)
 
 ---
+
+# Zeek Log Generation
+
+Zeek was used to process industrial PCAP files and generate structured network telemetry for analysis.
+
+![Zeek Logs](screenshots/zeek_logs.png)
+
+---
+
+# Baseline Analysis
+
+The baseline was established by analyzing network communications, identifying active hosts, and understanding normal traffic patterns.
+
+![Baseline Analysis](screenshots/baseline_analysis.png)
+
+---
+
+# Splunk Investigation
+
+Example Splunk searches were used to validate data ingestion and support dashboard development.
+
+![Splunk Search](screenshots/splunk_search.png)
+
+---
+
+# Repository Structure
+
+The repository is organized to separate documentation, reports, screenshots, scripts, and monitoring data.
+
+![Project Structure](screenshots/project_structure.png)
 
 # Detection Use Cases
 
